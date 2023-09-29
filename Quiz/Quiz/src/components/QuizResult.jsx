@@ -27,7 +27,6 @@ const QuizResult = ( {selectedAnswers,selectedLanguage} ) => {
     }
     const userScore = (correctCount / totalcount) * 100;
     setScore(userScore);
-    console.log(totalcount);
   }, [selectedAnswers]);
 
   // Determine proficiency level based on the score
