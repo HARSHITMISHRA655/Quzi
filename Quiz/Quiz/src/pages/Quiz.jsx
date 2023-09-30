@@ -64,7 +64,7 @@ const QuizPage = () => {
   const handleNext = () => {
     if (currentQuestionIndex < QuizData[selectedLanguage].length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setPreviousQuestionIndex(currentQuestionNumber);
+      setPreviousQuestionIndex(currentQuestionIndex);
     }
   };
 

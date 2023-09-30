@@ -4,10 +4,10 @@ import Navbar from "../components/Navbar";
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <Navbar location={"Home"}/>
       <div className="flex flex-col bg-gray-200 m-4 gap-2 items-center justify-between min-h-[80vh]">
         <h2 className="text-[48px] flex gap-2 ">
-          😎 Welcome to Language Learning Game
+          😎 Welcome to Quzi
         </h2>
         <p className="text-[24px]">
           Improve your language proficiency through interactive exercises and
@@ -18,7 +18,7 @@ const Home = () => {
             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="/quiz">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Practise Quiz
+                  practice Quiz
                 </h5>
               </a>
               <p class=" mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -48,7 +48,7 @@ const Home = () => {
             </div>
           </li>
           <li>
-            <div class="max-w-sm p-6 h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="max-w-sm flex flex-col justify-between p-6 h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="/leaderboard">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Leaderboard
@@ -59,7 +59,7 @@ const Home = () => {
               </p>
               <a
                 href="/leaderboard"
-                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="inline-flex w-fit items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 See Leaderboard
                 <svg
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
           </li>
           <li>
-            <div class="max-w-sm p-6 h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="max-w-sm flex flex-col justify-between p-6 h-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
               <a href="/profile">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Profile
@@ -92,7 +92,7 @@ const Home = () => {
               </p>
               <a
                 href="/profile"
-                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                class="inline-flex w-fit items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 See profile
                 <svg
