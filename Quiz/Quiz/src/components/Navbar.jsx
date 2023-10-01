@@ -25,16 +25,16 @@ const Navbar = ({location}) => {
           <a href="/" class={location=="Home" ? active : unactive} aria-current="page">Home</a>
         </li>
         <li>
-          <a href="/quiz" class={location=="practice" ? active : unactive} aria-current="page" >practice</a>
+          <a href="/quiz" class={location=="Practice" ? active : unactive} aria-current="page" >Practice</a>
         </li>
         <li>
-          <a href="/leaderboard" class={location=="Leaderboard" ? active : unactive}>Leaderboard</a>
+          <a href="/leaderboard" class={location=="Leaderboard" ? active : unactive} aria-current="page">Leaderboard</a>
         </li>
         <li>
-          <a href="/profile" class={location=="Profile" ? active : unactive}>Profile</a>
+          <a href="/profile" class={location=="Profile" ? active : unactive} aria-current="page">Profile</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          <a href="https://portfolio-harshit-phi.vercel.app/" target="_blank" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About Me</a>
         </li>
       </ul>
     </div>

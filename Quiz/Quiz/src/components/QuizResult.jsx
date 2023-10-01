@@ -67,8 +67,12 @@ const QuizResult = ({ selectedAnswers, selectedLanguage }) => {
     }
   }, [score]);
 
+  // useEffect(() => {
+
+  // },[]);
+
   return (
-    <><Navbar location={"practice"} />
+    <><Navbar location={"Practice"} />
     <div className="bg-gray-300 font-serif w-[100vw] h-[90vh] overflow-hidden flex justify-center items-center ">
       <div className=" bg-gray-400 rounded-md min-w-[500px] gap-3 p-5 flex flex-col">
         <p className=" self-center text-[32px]">Results</p>

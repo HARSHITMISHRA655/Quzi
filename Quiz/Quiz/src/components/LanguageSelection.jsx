@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Img from "../assets/pngegg.png"
+import Img from "../assets/question mark.png"
 
 const LanguageSelection = ({
   languages,
@@ -18,13 +18,14 @@ const LanguageSelection = ({
     <>
     <div className="flex w-[100vw] flex-row overflow-hidden">
       
-      <div className="flex w-1/2">
+      <div className="flex w-1/2 justify-center items-center">
         <img
           width={"1000vw"}
-          height={"100vh"}
+          height={"80vh"}
           src={Img}
           alt=""
           srcset=""
+          className="h-3/4  w-1/2"
         />
       </div>
       <div className=" bg-amber-600 w-1/2 flex flex-col justify-center items-center h-[100vh] overflow-hidden gap-4">

@@ -2,7 +2,7 @@ const UserQuiz = require("../model/userQuiz"); // Adjust the import path as need
 
 // Get all user quizzes
 const getUserQuizzes = async (req, res, next) => {
-  const { email } = req.body;
+  const { email } = req.params;
   try {
     const userQuizzes = await UserQuiz.find({ email });
     res.json(userQuizzes);

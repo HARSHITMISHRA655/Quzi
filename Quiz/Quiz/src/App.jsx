@@ -2,6 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import Quiz from './pages/Quiz'
 import Home from './pages/Home'
+import Profile from './pages/Profile'
+import Register from './pages/Register'
+import Login from './pages/Login'
+import Leaderboard from './pages/Leaderboard'
 
 import {
   createBrowserRouter,
@@ -12,13 +16,12 @@ import {
 
 const router = createBrowserRouter(
   createRoutesFromElements([
-    // <Route path="/login" element={<Login />} />,
-    // <Route path="/register" element={<Register />} />,
-    // <Route path="/record" element={<Record />} />,
-    // <Route path="/upload" element={<Upload />} />,
-    // <Route path="/transcription" element={<Transcription />} />,
+    <Route path="/register" element={<Register />} />,
+    <Route path="/login" element={<Login />} />,
     <Route path="/" element={<Home />} />,
     <Route path="/quiz" element={<Quiz />} />,
+    <Route path="/leaderboard" element={<Leaderboard />} />,
+    <Route path="/profile" element={<Profile />} />,
   ])
 );
 

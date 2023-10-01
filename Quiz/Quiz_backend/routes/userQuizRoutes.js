@@ -5,7 +5,7 @@ const UserQuiz = require("../model/userQuiz"); // Adjust the import path as need
 const { getUserQuizzes,createOrUpdateUserQuiz } = require("../controllers/userQuizControllers");
 
 // Define routes for userQuiz
-router.get("/getData", getUserQuizzes);
+router.get("/getData/:email", getUserQuizzes);
 router.post("/addData", createOrUpdateUserQuiz);
 
 module.exports = router;
