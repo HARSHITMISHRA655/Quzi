@@ -42,4 +42,4 @@ To get started with Quzi, follow these steps:
 
 ## Images 
 
-![Image](/Quiz/Quiz/src/assets/Quzi_Image.png)
+![Quzi Img](/Quiz/Quiz/src/assets/Quzi_image.png)
