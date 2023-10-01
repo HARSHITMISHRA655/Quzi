@@ -1,6 +1,6 @@
 # Quzi - Quiz Learning Game
 
-![Quzi Logo](quzi-logo.png)
+![Quzi Logo](/Quiz/Quiz/src/assets/Q_logo.png)
 
 Quzi is an interactive and engaging quiz learning game designed to make learning fun and effective. It provides a platform for users to take quizzes on various topics, test their knowledge, and improve their skills in an enjoyable way.
 
@@ -8,9 +8,8 @@ Quzi is an interactive and engaging quiz learning game designed to make learning
 
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+- [Images](#images)
+
 
 ## Features
 
@@ -28,6 +27,8 @@ Quzi is an interactive and engaging quiz learning game designed to make learning
 
 ## Getting Started
 
+To get started with Quzi, follow these steps:
+
 1. **Clone the Repository:** Begin by cloning this repository to your local machine:
 
    ```bash
@@ -37,6 +38,8 @@ Quzi is an interactive and engaging quiz learning game designed to make learning
 
 3. **npm install in cmd of quzi and quzi_backend folder**
 
-4. **npm start** : Quzi frontend
+4. **npm start** : Both frontend and backend
 
-5. **node index.js** : Quzi backend
+## Images 
+
+![Image](/Quiz/Quiz/src/assets/Quzi_Image.png)
