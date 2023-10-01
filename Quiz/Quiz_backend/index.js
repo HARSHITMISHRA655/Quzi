@@ -16,7 +16,7 @@ config({
 // Using Middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(morgan("common"));
+
 app.use(
   cors({
     origin: "*",
