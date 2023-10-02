@@ -1,4 +1,4 @@
-# Quzi - Quiz Learning Game <img src="/Quiz/Quiz/src/assets/Q_logo.png" alt="Quzi Logo" width="28">
+# Quzi - Quiz Learning Game <img src="/Quzi/Quzi_frontend/src/assets/Q_logo.png" alt="Quzi Logo" width="28">
 
 Quzi is an interactive and engaging quiz learning game designed to make learning fun and effective. It provides a platform for users to take quizzes on various topics, test their knowledge, and improve their skills in an enjoyable way.
 
@@ -40,4 +40,4 @@ To get started with Quzi, follow these steps:
 
 ## Images 
 
-<img src="/Quiz/Quiz/src/assets/Quzi_image.png" alt="Quzi Img" width="800">
+<img src="/Quzi/Quzi_frontend/src/assets/Quzi_image.png" alt="Quzi Img" width="1000">
