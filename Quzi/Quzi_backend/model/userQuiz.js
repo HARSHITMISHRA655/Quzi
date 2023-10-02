@@ -5,7 +5,7 @@ const userQuizSchema = new mongoose.Schema({
   score: [],
   proficiencyLevel: [],
   attempts: [],
-  correctQuestions: [],
+  correctAttempts: [],
   totalQuestions: [],
   language: [],
   createdAt: Date,

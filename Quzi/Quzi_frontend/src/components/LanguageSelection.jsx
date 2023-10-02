@@ -16,7 +16,8 @@ const LanguageSelection = ({
 
   return (
     <>
-    <div className="flex w-[100vw] flex-row overflow-hidden">
+    <Navbar location={"Practice"} />
+    <div className="flex w-[100vw] h-[90vh] flex-row overflow-hidden">
       
       <div className="flex w-1/2 justify-center items-center">
         <img
@@ -32,9 +33,9 @@ const LanguageSelection = ({
         <div className="text-white text-[20px] w-3/4">
           <p className="text-[32px]">Instructions:</p>
           <ul className="list-disc">
-            <li>There will be total of 10 questions. </li>
-            <li>Easy, Medium and Hard questions will consist of 1 Marks,3 Marks and 5 Marks each.</li>
-            <li>Time will be 15 sec for each question. </li>
+            <li>Time will be 30 sec for each question. </li>
+            <li>Easy, Medium and Hard questions will consist of 1 Marks, 3 Marks and 5 Marks each.</li>
+            <li>There are multiple languages available, you can choose in which language you want to give. </li>
           </ul>
         </div>
         <h2 className="text-[32px] text-white">CHOOSE A LANGUAGE</h2>

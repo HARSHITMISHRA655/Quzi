@@ -26,7 +26,6 @@ export default function Profile() {
 
   const getUserQuizData = async ({ userEmail }) => {
     // Fetch the email from cookies
-    console.log("i am inside");
     console.log(userEmail);
     const link = "http://localhost:8000/api/userQuiz/getData/" + userEmail;
     console.log(link);
@@ -42,6 +41,11 @@ export default function Profile() {
         console.log(data);
         console.log(data.proficiencyLevel);
         setScore(data.score);
+        setProficiencyLevel(data.proficiencyLevel);
+        setAttempts(data.attempts);
+        setCorrectQuestions(data.correctAttempts);
+        setTotalQuestions(data.totalQuestions);
+        setLanguage(data.language);
         console.log("data fetch successfully");
       } else {
         console.log("Failed to fetch data");
@@ -63,7 +67,7 @@ export default function Profile() {
           Welcome {email}
         </div>
         <div className="flex flex-row justify-around flex-wrap ">
-          {score.map((score, index) => (
+          {score.map((scores, index) => (
             <div
               key={index}
               className="flex flex-col gap-1 w-[30%] text-[16px] m-4"
@@ -80,24 +84,23 @@ export default function Profile() {
                   </div>
                   <div className="w-1/2 ml-8">
                     <p>
-                      :{"    "}
-                      {score}%
+                      :{"    "} {Math.round(scores)}%
                     </p>
                     <p>
                       :{"    "}
-                      {proficiencyLevel.length}
+                      {proficiencyLevel[index]!=undefined ? proficiencyLevel[index] : "Not Calculated"}
                     </p>
                     <p>
                       :{"    "}
-                      {Attempts.length}
+                      {Attempts[index]!=undefined ? Attempts[index] : "Not Calculated"}
                     </p>
                     <p>
                       :{"    "}
-                      {}
+                      {correctQuestions[index]!=undefined ? correctQuestions[index] : "Not Calculated"}
                     </p>
                     <p>
                       :{"    "}
-                      {}
+                      {totalQuestions[index]!=undefined ? totalQuestions[index] : "Not Calculated"}
                     </p>
                   </div>
                 </div>

@@ -40,4 +40,4 @@ To get started with Quzi, follow these steps:
 
 ## Images 
 
-<img src="/Quiz/Quiz/src/assets/Quzi_image.png" alt="Quzi Img" width="300">
+<img src="/Quiz/Quiz/src/assets/Quzi_image.png" alt="Quzi Img" width="800">

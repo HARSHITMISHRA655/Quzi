@@ -12,6 +12,10 @@ const QuizPage = () => {
   const [showResults, setShowResults] = useState(false);
   const [timer, setTimer] = useState(30); // Initial timer value in seconds
   const [startQuiz, setStartQuiz] = useState(false);
+  const [score, setScore] = useState(0);
+  const [proficiencyLevel, setProficiencyLevel] = useState("");
+  const [unattemptedQuestions, setUnattemptedQuestions] = useState([]);
+  const [wrongAnswers, setWrongAnswers] = useState([]);
 
   useEffect(() => {
     let interval;
@@ -69,7 +73,55 @@ const QuizPage = () => {
   };
 
   const submitAnswers = () => {
+    let correctCount = 0;
+    let totalcount = 0;
+
+    for (let i = 0; i < QuizData[selectedLanguage].length; i++) {
+      if (selectedAnswers[i] == undefined ) {
+        // if (!unattemptedQuestions.includes(i)) {
+          setUnattemptedQuestions((prevUnattemptedQuestions) => [
+            ...prevUnattemptedQuestions,
+            i,
+          ]);
+        // }
+      } else if (
+        QuizData[selectedLanguage][i].correctAnswer ==
+        QuizData[selectedLanguage][i].options.indexOf(selectedAnswers[i])
+      ) {
+        if (QuizData[selectedLanguage][i].difficulty === "easy")
+          correctCount += 1;
+        else if (QuizData[selectedLanguage][i].difficulty === "medium")
+          correctCount += 2;
+        else correctCount += 3;
+      } else {
+        // if (!wrongAnswers.includes(i)) {
+          setWrongAnswers((prevWrongAnswers) => [
+            ...prevWrongAnswers,
+            i,
+          ]);
+        // }
+      }
+      if (QuizData[selectedLanguage][i].difficulty === "easy") totalcount += 1;
+      else if (QuizData[selectedLanguage][i].difficulty === "medium")
+        totalcount += 2;
+      else totalcount += 3;
+    }
+
+    const userScore = (correctCount / totalcount) * 100;
+    setScore(userScore);
+    if (userScore >= 90) {
+      setProficiencyLevel("Fluent");
+    } else if (userScore >= 80) {
+      setProficiencyLevel("Advanced");
+    } else if (userScore >= 65) {
+      setProficiencyLevel("Intermediate");
+    } else if (userScore >= 50) {
+      setProficiencyLevel("Basic");
+    } else {
+      setProficiencyLevel("Beginner");
+    }
     setShowResults(true);
+    
   };
 
   const handleLanguageSelect = (language) => {
@@ -83,6 +135,7 @@ const QuizPage = () => {
     setShowResults(false); // Reset results display
     startQuiz(true);
   };
+
 
   return (
     <div>
@@ -146,8 +199,12 @@ const QuizPage = () => {
       )}
       {showResults && (
         <QuizResult
-          selectedAnswers={selectedAnswers}
           selectedLanguage={selectedLanguage}
+          score={score}
+          proficiencyLevel={proficiencyLevel}
+          attempts={QuizData[selectedLanguage].length - unattemptedQuestions.length}
+          correctAttempts={QuizData[selectedLanguage].length - wrongAnswers.length - unattemptedQuestions.length}
+          totalQuestions={QuizData[selectedLanguage].length}
         />
       )}
     </div>

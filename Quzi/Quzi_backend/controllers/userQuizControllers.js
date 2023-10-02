@@ -39,7 +39,7 @@ const createOrUpdateUserQuiz = async (req, res, next) => {
       userQuiz.score.push(score);
       userQuiz.proficiencyLevel.push(proficiencyLevel);
       userQuiz.attempts.push(attempts);
-      userQuiz.correctQuestions.push(correctAttempts);
+      userQuiz.correctAttempts.push(correctAttempts);
       userQuiz.totalQuestions.push(totalQuestions);
       userQuiz.language.push(language);
       userQuiz.createdAt = Date.now();
