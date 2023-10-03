@@ -1,4 +1,4 @@
-import {React,useState} from "react";
+import {React,useState,useEffect} from "react";
 // import { TEInput, TERipple } from "tw-elements-react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -14,6 +14,12 @@ function Register(){
   // const dispatch = useDispatch();
   // const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    const userEmail = localStorage.getItem("Quziemail");
+    if(userEmail){
+      navigate("/");
+    }
+  },[]);
   // useEffect(() => {
   //   checkCookie();
   //   if (isLoggedIn) {

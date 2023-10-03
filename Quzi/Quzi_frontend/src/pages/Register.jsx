@@ -2,6 +2,7 @@ import {React,useState} from "react";
 // import { TEInput, TERipple } from "tw-elements-react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useEffect } from "react";
 // import { useDispatch, useSelector } from "react-redux";
 
 function Register(){
@@ -11,6 +12,13 @@ function Register(){
   const [rememberMe, setRememberMe] = useState(false);
   const [alreadyClicked, setAlereadyClicked] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const userEmail = localStorage.getItem("Quziemail");
+    if(userEmail){
+      navigate("/");
+    }
+  },[]);
   // const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
   // const dispatch = useDispatch();
   // const [isLoading, setIsLoading] = useState(false);

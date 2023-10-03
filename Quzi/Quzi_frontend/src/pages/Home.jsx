@@ -1,7 +1,16 @@
-import React from "react";
+import {React,useEffect} from "react";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const userEmail = localStorage.getItem("Quziemail");
+    console.log(userEmail);
+    if(!userEmail){
+      navigate("./login");
+    }
+  },[]);
   return (
     <>
       <Navbar location={"Home"}/>
